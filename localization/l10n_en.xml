@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n>
+    <elements>
+        <e k="name_poleBillboard" v="Pole Billboard" />
+        <e k="function_poleBillboard" v="Billboard on a raised platform" />
+        <e k="name_2x3Billboard" v="Billboard 1" />
+        <e k="name_3x2Billboard" v="Billboard 2" />
+        <e k="function_Billboard" v="Billboard" />
+        <e k="configuration_design" v="Billboard Design" />
+        <e k="design_modTime" v="Mod Time" />
+        <e k="design_richard" v="Richard" />
+        <e k="design_tony" v="Tony" />
+    </elements>
+</l10n>

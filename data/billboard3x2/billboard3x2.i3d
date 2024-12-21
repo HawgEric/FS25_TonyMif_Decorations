@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="billboard3x2.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="$data/maps/textures/shared/props/billboards/billboards_diffuse.png"/>
+    <File fileId="3" filename="$data/maps/textures/shared/props/billboards/billboards_normal.png"/>
+    <File fileId="4" filename="$data/maps/textures/shared/props/billboards/billboards_specular.png"/>
+    <File fileId="6" filename="$data/shared/default_normal.png"/>
+    <File fileId="7" filename="textures/breakstuff_diffuse.dds"/>
+    <File fileId="5" filename="textures/modtime_diffuse.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="billboards_mat" materialId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="lambert1" materialId="6" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="modtimeDecal_mat" materialId="35">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+    </Material>
+    <Material name="tonyDecal_mat" materialId="34">
+      <Texture fileId="7"/>
+      <Normalmap fileId="6"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="billboard3x2.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="billboard" nodeId="12">
+      <Shape name="billboard_3x2" lockedgroup="true" shapeId="1" static="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" density="0.0001" clipDistance="350" nodeId="13" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6">
+        <Shape name="billboard3x2Vis" shapeId="2" clipDistance="350" nodeId="14" castsShadows="true" receiveShadows="true" materialIds="5"/>
+        <Shape name="modtimeDecal" shapeId="3" clipDistance="200" nodeId="17" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="35"/>
+        <Shape name="tonyDecal" shapeId="3" visibility="false" clipDistance="200" nodeId="15" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="34"/>
+      </Shape>
+      <TransformGroup name="clearArea1Start" translation="-3.26573 0 -0.785273" nodeId="18">
+        <TransformGroup name="clearArea1Height" translation="0 0 1.07936" nodeId="19"/>
+        <TransformGroup name="clearArea1Width" translation="6.49538 0 0" nodeId="20"/>
+      </TransformGroup>
+      <TransformGroup name="levelAreaStart" translation="-3.26573 0 -0.785273" nodeId="21">
+        <TransformGroup name="levelAreaHeight" translation="0 0 1.07936" nodeId="22"/>
+        <TransformGroup name="levelAreaWidth" translation="6.49538 0 0" nodeId="23"/>
+      </TransformGroup>
+      <TransformGroup name="testAreas" nodeId="24">
+        <TransformGroup name="testArea1Start" translation="-3.3261 0 -0.800404" nodeId="25">
+          <TransformGroup name="testArea1End" translation="6.63464 0 1.067" nodeId="26">
+            <TransformGroup name="testArea1Start" translation="-3.3261 0 -0.800404" nodeId="27"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="tipOcclusionUpdateAreas" nodeId="28">
+        <TransformGroup name="tipOcclusionUpdateAreaStart01" translation="-3.3261 0 -0.800404" nodeId="29">
+          <TransformGroup name="tipOcclusionUpdateAreaEnd01" translation="6.63464 0 1.067" nodeId="30">
+            <TransformGroup name="testArea1Start" translation="-3.3261 0 -0.800404" nodeId="31"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

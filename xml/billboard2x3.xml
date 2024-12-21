@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="simplePlaceable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_name_2x3Billboard</name>
+        <functions>
+            <function>$l10n_function_Billboard</function>
+        </functions>
+        <image>data/billboard2x3/store_billboard2x3.dds</image>
+        <price>1000</price>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>NONE</brand>
+        <species>PLACEABLE</species>
+        <category>placeableMisc</category>
+        <brush>
+            <type>placeable</type>
+            <category>decoration</category>
+            <tab>decoration</tab>
+        </brush>
+        <vertexBufferMemoryUsage>76800</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>22528</indexBufferMemoryUsage>
+        <textureMemoryUsage>327680</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+    <base>
+        <filename>data/billboard2x3/billboard2x3.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+    <placement useRandomYRotation="false" useManualYRotation="true">
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+    <indoorAreas/>
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01" />
+        </updateAreas>
+    </ai>
+
+    <solarPanels>
+        <solarPanelsConfigurations title="$l10n_configuration_design">
+            <solarPanelsConfiguration name="$l10n_design_modTime" isActive="true" price="0" incomePerHour="0">
+                <objectChange node="decal_ModTime" visibilityActive="true" />
+                <objectChange node="decal_Richard" visibilityActive="false" />            
+            </solarPanelsConfiguration>
+            <solarPanelsConfiguration name="$l10n_design_richard" isActive="false" price="0" incomePerHour="0">
+                <objectChange node="decal_ModTime" visibilityActive="false" />
+                <objectChange node="decal_Richard" visibilityActive="true" />               
+            </solarPanelsConfiguration>
+        </solarPanelsConfigurations>
+    </solarPanels>
+
+    <i3dMappings>      
+        <i3dMapping id="decal_ModTime" node="0>0|1" />
+        <i3dMapping id="decal_Richard" node="0>0|2" />
+        <i3dMapping id="clearArea1Start" node="0>1" />
+        <i3dMapping id="clearArea1Height" node="0>1|0" />
+        <i3dMapping id="clearArea1Width" node="0>1|1" />
+        <i3dMapping id="levelArea1Start" node="0>2" />
+        <i3dMapping id="levelArea1Height" node="0>2|0" />
+        <i3dMapping id="levelArea1Width" node="0>2|1" />
+        <i3dMapping id="testArea1Start" node="0>3|0" />
+        <i3dMapping id="testArea1End" node="0>3|0|0" />
+        <i3dMapping id="tipOcclusionUpdateAreaStart01" node="0>4|0" />
+        <i3dMapping id="tipOcclusionUpdateAreaEnd01" node="0>4|0|0" />
+    </i3dMappings>
+</placeable>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="poleBillboard.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="$data/maps/textures/shared/props/billboards/billboard9M_diffuse.png"/>
+    <File fileId="3" filename="$data/maps/textures/shared/props/billboards/billboard9M_normal.png"/>
+    <File fileId="4" filename="$data/maps/textures/shared/props/billboards/billboard9M_specular.png"/>
+    <File fileId="6" filename="$data/shared/default_normal.png"/>
+    <File fileId="5" filename="textures/breakstuff_diffuse.dds"/>
+    <File fileId="7" filename="textures/modtime_diffuse.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="billboard9M_mat" materialId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="breakStuff_mat" materialId="47">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+    </Material>
+    <Material name="lambert1" materialId="7" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="modTime_mat" materialId="46">
+      <Texture fileId="7"/>
+      <Normalmap fileId="6"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="poleBillboard.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="billboard" nodeId="12">
+      <Shape name="poleBillboard" lockedgroup="true" shapeId="1" static="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" density="0.0001" clipDistance="350" nodeId="13" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="7">
+        <Shape name="billboard9MVis" shapeId="2" clipDistance="350" nodeId="14" castsShadows="true" receiveShadows="true" materialIds="5"/>
+        <Shape name="tonyDecal" shapeId="3" clipDistance="200" nodeId="15" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="47"/>
+        <Shape name="modtimeDecal" shapeId="3" visibility="false" clipDistance="200" nodeId="17" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="46"/>
+        <TransformGroup name="clearArea1Start" translation="-0.483121 0 -0.493739" nodeId="18">
+          <TransformGroup name="clearArea1Height" translation="0 0 1.02097" nodeId="19"/>
+          <TransformGroup name="clearArea1Width" translation="1.02087 0 0" nodeId="20"/>
+        </TransformGroup>
+        <TransformGroup name="levelAreaStart" translation="-0.483121 0 -0.493739" nodeId="21">
+          <TransformGroup name="levelAreaHeight" translation="0 0 1.02097" nodeId="22"/>
+          <TransformGroup name="levelAreaWidth" translation="1.02087 0 0" nodeId="23"/>
+        </TransformGroup>
+        <TransformGroup name="testAreas" nodeId="24">
+          <TransformGroup name="testArea1Start" translation="-0.492088 0 -0.518559" nodeId="25">
+            <TransformGroup name="testArea1End" translation="1.09248 0 1.07694" nodeId="26"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="tipOcclusionUpdateAreas" nodeId="27">
+          <TransformGroup name="tipOcclusionUpdateAreaStart01" translation="-0.492088 0 -0.518559" nodeId="28">
+            <TransformGroup name="tipOcclusionUpdateAreaEnd01" translation="1.09248 0 1.07694" nodeId="29"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="lights" nodeId="30">
+          <TransformGroup name="realLights" nodeId="31">
+            <TransformGroup name="realLightsLow" nodeId="32">
+              <Light name="pointLIghtLow01" translation="-2.11249 4.96961 0.723705" rotation="-34.6216 0 0" nodeId="33" type="point" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.0012" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.0005" depthMapResolution="512" shadowFarDistance="1000" shadowExtrusionDistance="200" softShadowsLightSize="0.5" softShadowsLightDistance="15" softShadowsDepthBiasFactor="1" softShadowsMaxPenumbraSize="0.5" range="1"/>
+              <Light name="pointLIghtLow02" translation="-1.01427 4.96961 0.723705" rotation="-34.6216 0 0" nodeId="34" type="point" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.0012" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.0005" depthMapResolution="512" shadowFarDistance="1000" shadowExtrusionDistance="200" softShadowsLightSize="0.5" softShadowsLightDistance="15" softShadowsDepthBiasFactor="1" softShadowsMaxPenumbraSize="0.5" range="1"/>
+              <Light name="pointLIghtLow03" translation="-0.0162213 4.96961 0.723705" rotation="-34.6216 0 0" nodeId="35" type="point" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.0012" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.0005" depthMapResolution="512" shadowFarDistance="1000" shadowExtrusionDistance="200" softShadowsLightSize="0.5" softShadowsLightDistance="15" softShadowsDepthBiasFactor="1" softShadowsMaxPenumbraSize="0.5" range="1"/>
+              <Light name="pointLIghtLow04" translation="0.99345 4.96961 0.723705" rotation="-34.6216 0 0" nodeId="36" type="point" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.0012" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.0005" depthMapResolution="512" shadowFarDistance="1000" shadowExtrusionDistance="200" softShadowsLightSize="0.5" softShadowsLightDistance="15" softShadowsDepthBiasFactor="1" softShadowsMaxPenumbraSize="0.5" range="1"/>
+              <Light name="pointLIghtLow05" translation="2.11301 4.96961 0.723705" rotation="-34.6216 0 0" nodeId="37" type="point" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.0012" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.0005" depthMapResolution="512" shadowFarDistance="1000" shadowExtrusionDistance="200" softShadowsLightSize="0.5" softShadowsLightDistance="15" softShadowsDepthBiasFactor="1" softShadowsMaxPenumbraSize="0.5" range="1"/>
+            </TransformGroup>
+            <TransformGroup name="realLightsHigh" nodeId="38">
+              <Light name="spotLIghtHigh01" translation="-2.13172 4.93398 0.752933" rotation="-68.986 0 -177.995" nodeId="39" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" softShadowsLightSize="0.01" softShadowsLightDistance="15" softShadowsDepthBiasFactor="5" softShadowsMaxPenumbraSize="0.5" range="10" coneAngle="60" dropOff="5"/>
+              <Light name="spotLIghtHigh02" translation="-0.985752 4.9741 0.752933" rotation="-68.986 0 -177.995" nodeId="40" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" softShadowsLightSize="0.01" softShadowsLightDistance="15" softShadowsDepthBiasFactor="5" softShadowsMaxPenumbraSize="0.5" range="10" coneAngle="60" dropOff="5"/>
+              <Light name="spotLIghtHigh03" translation="0.00855099 5.0089 0.752933" rotation="-68.986 0 -177.995" nodeId="41" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" softShadowsLightSize="0.01" softShadowsLightDistance="15" softShadowsDepthBiasFactor="5" softShadowsMaxPenumbraSize="0.5" range="10" coneAngle="60" dropOff="5"/>
+              <Light name="spotLIghtHigh04" translation="1.12112 5.04785 0.752933" rotation="-68.986 0 -177.995" nodeId="42" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" softShadowsLightSize="0.01" softShadowsLightDistance="15" softShadowsDepthBiasFactor="5" softShadowsMaxPenumbraSize="0.5" range="10" coneAngle="60" dropOff="5"/>
+              <Light name="spotLIghtHigh05" translation="2.09233 5.08185 0.752933" rotation="-68.986 0 -177.995" nodeId="43" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" softShadowsLightSize="0.01" softShadowsLightDistance="15" softShadowsDepthBiasFactor="5" softShadowsMaxPenumbraSize="0.5" range="10" coneAngle="60" dropOff="5"/>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+      </Shape>
+    </TransformGroup>
+  </Scene>
+
+</i3D>
